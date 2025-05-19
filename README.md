@@ -53,14 +53,14 @@ This project demonstrates a complete authentication flow using **JSON Web Tokens
 - `name`: `String`, unique, required
 - `hash`: `String`, required
 - `salt`: `String`, required
-- `dateCreated`: `Date`, default Date.now
+- `dateCreated`: `Date`, default `Date.now`
 
 ### `RefreshTokens` Collection
 
 - `userId`: `ObjectId` (refers to `Users`), required
 - `value`: `String`, unique, required
-- `expiresAt`: `Date`, with MongoDB TTL index (expires: 0), required
-- `createdAt` and `updatedAt`: `Date`, set using Mongoose timestamps property (timestamps: true)
+- `expiresAt`: `Date`, with MongoDB TTL index (`expires: 0`), required
+- `createdAt` and `updatedAt`: `Date`, set using Mongoose timestamps property (`timestamps: true`)
 
 ## Key Generation
 
@@ -74,39 +74,39 @@ These keys are stored in the `../keys/` directory and are reused for all token o
 ## Setup Instructions
 
 1. **Clone the repository**:
-    git clone https://github.com/kostiantynKarzhanov/node-express_authentication_json-web-token.git
-    cd node-express_authentication_json-web-token
+    `git clone https://github.com/kostiantynKarzhanov/node-express_authentication_json-web-token.git`
+    `cd node-express_authentication_json-web-token`
 
 2. **Install dependencies**:
-    npm install
+    `npm install`
 
-3. **Configure environment**
+3. **Configure environment**:
     Create a .env file in the root directory with the following content:
 
-    PORT = 3001
-    DB_STR_MONGO=mongodb://localhost/db_express_authentication
+    `PORT = 3001`
+    `DB_STR_MONGO=mongodb://localhost/db_express_authentication`
 
-    # --- Environment Mode Configuration ---
-    NODE_ENV=development
+    `# --- Environment Mode Configuration ---`
+    `NODE_ENV=development`
 
-    # --- JWT Configuration ---
-    JWT_ALG = RSA-SHA256
-    JWT_COOKIE_NAME = access_token
-    JWT_TTL_MS = 60000 # 1 minute in milliseconds
+    `# --- JWT Configuration ---`
+    `JWT_ALG = RSA-SHA256`
+    `JWT_COOKIE_NAME = access_token`
+    `JWT_TTL_MS = 60000 # 1 minute in milliseconds`
 
-    # --- Refresh Token Configuration ---
-    REFRESH_TOKEN_COOKIE_NAME = refresh_token
-    REFRESH_TOKEN_TTL_MS = 180000 # 3 minutes in milliseconds
+    `# --- Refresh Token Configuration ---`
+    `REFRESH_TOKEN_COOKIE_NAME = refresh_token`
+    `REFRESH_TOKEN_TTL_MS = 180000 # 3 minutes in milliseconds`
 
 4. **Start the server**:
-    npm run dev
+    `npm run dev`
 
 5. **Access the app**:
-    http://localhost:3001
+    `http://localhost:3001`
 
 ## Project Structure
 
-|─ app
+`|─ app
 ├── config/
 ├── controllers/
 ├── dal/
@@ -120,4 +120,4 @@ These keys are stored in the `../keys/` directory and are reused for all token o
 
 ├─ keys/           # Contains generated RSA key pair
 ├─ .env
-└─ package.json
+└─ package.json`
