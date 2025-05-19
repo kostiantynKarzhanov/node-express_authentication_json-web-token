@@ -73,51 +73,51 @@ These keys are stored in the `../keys/` directory and are reused for all token o
 
 ## Setup Instructions
 
-1. **Clone the repository**:
-    `git clone https://github.com/kostiantynKarzhanov/node-express_authentication_json-web-token.git`
-    `cd node-express_authentication_json-web-token`
+1. **Clone the repository**:  
+    git clone https://github.com/kostiantynKarzhanov/node-express_authentication_json-web-token.git  
+    cd node-express_authentication_json-web-token  
 
-2. **Install dependencies**:
-    `npm install`
+2. **Install dependencies**:  
+    npm install  
 
-3. **Configure environment**:
-    Create a .env file in the root directory with the following content:
+3. **Configure environment**:  
+    Create a .env file in the root directory with the following content:  
 
-    `PORT = 3001`
-    `DB_STR_MONGO=mongodb://localhost/db_express_authentication`
+    PORT = 3001  
+    DB_STR_MONGO=mongodb://localhost/db_express_authentication  
 
-    `# --- Environment Mode Configuration ---`
-    `NODE_ENV=development`
+    **# --- Environment Mode Configuration ---**  
+    NODE_ENV=development  
 
-    `# --- JWT Configuration ---`
-    `JWT_ALG = RSA-SHA256`
-    `JWT_COOKIE_NAME = access_token`
-    `JWT_TTL_MS = 60000 # 1 minute in milliseconds`
+    **# --- JWT Configuration ---**  
+    JWT_ALG = RSA-SHA256  
+    JWT_COOKIE_NAME = access_token  
+    JWT_TTL_MS = 60000 # 1 minute in milliseconds  
 
-    `# --- Refresh Token Configuration ---`
-    `REFRESH_TOKEN_COOKIE_NAME = refresh_token`
-    `REFRESH_TOKEN_TTL_MS = 180000 # 3 minutes in milliseconds`
+    **# --- Refresh Token Configuration ---**  
+    REFRESH_TOKEN_COOKIE_NAME = refresh_token  
+    REFRESH_TOKEN_TTL_MS = 180000 # 3 minutes in milliseconds  
 
-4. **Start the server**:
-    `npm run dev`
+4. **Start the server**:  
+    npm run dev  
 
-5. **Access the app**:
-    `http://localhost:3001`
+5. **Access the app**:  
+    http://localhost:3001  
 
-## Project Structure
+## Project Structure  
 
-`|─ app
-├── config/
-├── controllers/
-├── dal/
-├── middleware/
-├── models/
-├── routes/
-├── services/
-├── utils/
-├── views/
-└── app.js
+|─ app  
+├── config/  
+├── controllers/  
+├── dal/  
+├── middleware/  
+├── models/  
+├── routes/  
+├── services/  
+├── utils/  
+├── views/  
+└── app.js  
 
 ├─ keys/           # Contains generated RSA key pair
 ├─ .env
-└─ package.json`
+└─ package.json
