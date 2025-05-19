@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore keys and tokens
+keys/
+
+# Ignore common OS-generated files/folders
+.DS_Store
