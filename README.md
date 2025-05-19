@@ -118,6 +118,6 @@ These keys are stored in the `../keys/` directory and are reused for all token o
 ├── views/  
 └── app.js  
 
-├─ keys/           # Contains generated RSA key pair
-├─ .env
-└─ package.json
+├─ keys/           # Contains generated RSA key pair  
+├─ .env  
+└─ package.json  
